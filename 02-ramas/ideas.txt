@@ -1,0 +1,13 @@
+# Ideas del equipo
+
+Cada persona agrega una idea en su propia rama y luego hace merge a main.
+Así practicamos el flujo de ramas sin pisar el trabajo de los demás.
+
+Formato sugerido:
+  [Tu nombre] — [Tu idea]
+
+Ejemplo:
+  Carlos Muñoz — automatizar el reporte semanal de métricas
+
+--- Agrega tu idea abajo ---
+

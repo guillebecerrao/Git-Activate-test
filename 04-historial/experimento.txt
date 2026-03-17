@@ -1,0 +1,11 @@
+# Archivo de experimentos
+
+Usa este archivo para practicar commits y reverts.
+Puedes agregar, cambiar o borrar líneas libremente. ¡No hay nada que romper!
+
+Estado inicial del experimento:
+- Version: 1.0
+- Estado: estable
+
+--- Zona de experimentos (edita abajo) ---
+
