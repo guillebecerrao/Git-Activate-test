@@ -1,4 +1,4 @@
-# Taller de Git — Mira Studio
+# Taller de Git — Activate Team
 
 Bienvenido al repositorio de práctica de Git para el equipo.
 
@@ -26,4 +26,4 @@ Bienvenido al repositorio de práctica de Git para el equipo.
 - Pregunta cuando tengas dudas.
 
 ---
-*Taller creado para el equipo de Mira Studio.*
+*Taller creado para el Activate Team.*
