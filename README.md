@@ -2,6 +2,13 @@
 
 Bienvenido al repositorio de práctica de Git para el equipo.
 
+## Participantes
+- Yerko
+- Alejandra
+- Rodolfo (el profe 2) 
+- Guille (el profe 1)
+- Ivan (Activate honorario) 
+
 ## Estructura del taller
 
 | Carpeta | Tema | Dificultad |
