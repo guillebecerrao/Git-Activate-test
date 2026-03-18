@@ -1,88 +1,122 @@
-# Ejercicio 4 — Historial: log, diff, revert
+🌐 [English](README.md) | [Español](README.es.md) | [Português](README.pt.md)
 
-## Objetivo
-Aprender a navegar el historial de cambios y a deshacer commits cuando algo sale mal.
+# Module 04 — History
 
-## Conceptos clave
+> This module is **optional but recommended**. It covers the tools you will reach for when something goes wrong in real collaborative work.
 
-- **git log**: ver todos los commits del proyecto.
-- **git diff**: ver exactamente qué líneas cambiaron.
-- **git revert**: crear un nuevo commit que deshace uno anterior (sin borrar historial).
-- **git reset**: mover el puntero del historial (con cuidado).
+## Objective
+Learn to navigate the change history, see exactly what changed and when, undo commits safely, and temporarily set work aside.
+
+## Key concepts
+
+- **git log**: see all commits in the project.
+- **git diff**: see exactly which lines changed.
+- **git revert**: create a new commit that undoes a previous one — the history stays intact.
+- **git reset**: move the history pointer back. Use with caution.
+- **git stash**: temporarily set aside uncommitted changes so you can work on something else.
 
 ---
 
-## Ejercicio paso a paso
+## Step by step
 
-### Paso 1 — Explorar el historial
+### Step 1 — Explore the history
+
 ```bash
-# Vista compacta
+# Compact view
 git log --oneline
 
-# Vista con ramas y merges
+# View with branches and merges
 git log --oneline --graph --all
 
-# Vista detallada de un commit específico
-git show <hash-del-commit>
+# Detailed view of a specific commit
+git show <commit-hash>
 ```
 
-### Paso 2 — Ver diferencias entre commits
+### Step 2 — See differences
+
 ```bash
-# Diferencia entre working directory y último commit
+# Difference between your working directory and the last commit
 git diff
 
-# Diferencia entre dos commits
+# Difference between two commits
 git diff <hash-1> <hash-2>
 
-# Diferencia entre una rama y main
-git diff main..feature/mi-rama
+# Difference between a branch and main
+git diff main..feature/my-branch
 ```
 
-### Paso 3 — Hacer cambios para practicar el revert
-Edita el archivo `experimento.txt` en esta carpeta, agrega algo y haz commit:
+### Step 3 — Make a change to practice revert
+
+Edit `experimento.txt` in this folder, add something, and commit:
 ```bash
 git add 04-historial/experimento.txt
-git commit -m "test: cambio de prueba para practicar revert"
+git commit -m "test: practice change for revert exercise"
 ```
 
-### Paso 4 — Deshacer el commit con revert
-Primero obtén el hash del commit que quieres deshacer:
+### Step 4 — Undo the commit with revert
+
+First, get the hash of the commit you want to undo:
 ```bash
 git log --oneline
 ```
-Luego reviértelo:
+Then revert it:
 ```bash
-git revert <hash-del-commit>
+git revert <commit-hash>
 ```
-Git creará un nuevo commit que deshace el anterior. El historial queda intacto.
+Git will open a text editor asking you to confirm the commit message — save and close it. Git creates a new commit that undoes the previous one. The history stays intact.
 
-### Paso 5 — Observa el resultado
+### Step 5 — Observe the result
+
 ```bash
 git log --oneline
 ```
-Verás ambos commits: el original y el que lo revierte.
+You will see both commits: the original and the one that reverts it.
 
 ---
 
-## Diferencia entre revert y reset
+## revert vs reset
 
-| Comando | Qué hace | Cuándo usarlo |
+| Command | What it does | When to use it |
 |---|---|---|
-| `git revert` | Crea un nuevo commit que deshace cambios | Cuando ya hiciste push (trabajo compartido) |
-| `git reset --soft` | Deshace el commit, mantiene cambios en staging | Solo en local, antes de push |
-| `git reset --hard` | Deshace el commit Y descarta los cambios | Con cuidado — se pierden los cambios |
+| `git revert` | Creates a new commit that undoes changes | When you've already pushed (shared work) |
+| `git reset --soft` | Undoes the commit, keeps changes staged | Only locally, before pushing |
+| `git reset --hard` | Undoes the commit AND discards the changes | With caution — changes are lost |
+
+> **Rule of thumb:** if the commit is already in the remote, always use `git revert`. Never use `git reset --hard` on shared history.
 
 ---
 
-## Desafio extra
-Usa `git blame experimento.txt` para ver quién modificó cada línea del archivo y en qué commit.
+## Bonus: git stash
 
-## Pistas
+Imagine you're in the middle of editing a file and need to quickly switch to another branch (for example, to help a teammate). You don't want to commit an unfinished change.
+
+```bash
+# Save your uncommitted changes temporarily
+git stash
+
+# Switch branch, do what you need, come back
+git checkout main
+# ... do something ...
+git checkout feature/your-branch
+
+# Recover your saved changes
+git stash pop
+```
+
+`git stash` is your "save for later" button.
+
+---
+
+## Extra challenge
+Use `git blame experimento.txt` to see who modified each line of the file and in which commit.
+
+## Hints
 <details>
-<summary>Ver pista</summary>
+<summary>Show hints</summary>
 
-- Nunca uses `git reset --hard` en commits que ya están en el remoto: afectarás a tus compañeros.
-- `git revert` es la opción segura para deshacer en un proyecto compartido.
-- Los primeros 7 caracteres del hash son suficientes para identificar un commit.
+- Never use `git reset --hard` on commits that are already in the remote — it will affect your teammates.
+- `git revert` is the safe option for undoing in a shared project.
+- The first 7 characters of the hash are enough to identify a commit.
+- `git stash pop` recovers your most recently stashed changes. If you stash multiple times, use `git stash list` to see them all.
 
 </details>

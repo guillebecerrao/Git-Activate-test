@@ -1,0 +1,10 @@
+# Team Members
+
+Each person adds their name by pushing from their own machine.
+Remember to pull before editing to avoid conflicts.
+
+Format:
+  [Your name] — [Your role] — [Date you joined the exercise]
+
+--- Team list ---
+

@@ -1,0 +1,13 @@
+# Team Ideas
+
+Each person adds one idea in their own branch, then merges to main.
+This way we practice the branch workflow without stepping on each other's work.
+
+Suggested format:
+  [Your name] — [Your idea]
+
+Example:
+  Carlos Muñoz — automate the weekly metrics report
+
+--- Add your idea below ---
+

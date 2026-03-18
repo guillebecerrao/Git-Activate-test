@@ -1,0 +1,13 @@
+# Team Notes
+
+Add your name and one thing you want to learn about Git.
+Then commit that change.
+
+Suggested format:
+  [Your name] — [One thing you want to learn]
+
+Example:
+  Ana García — I want to understand how branches work
+
+--- Write below this line ---
+

@@ -1,0 +1,13 @@
+# Conflict Practice File
+
+Instructions: two people must edit the same line below at the same time.
+One pushes first. The other will need to resolve the conflict when pulling.
+
+--- Edit this line only ---
+
+Current project status: [EDIT HERE]
+
+--- Do not edit below ---
+
+Remember: a conflict is not an error — it is a normal situation when working as a team.
+Git just needs you, the human, to decide which version is correct.

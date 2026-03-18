@@ -1,36 +1,46 @@
-# Taller de Git — Activate Team
+🌐 [English](README.md) | [Español](README.es.md) | [Português](README.pt.md)
 
-Bienvenido al repositorio de práctica de Git para el equipo.
+# Git Workshop — Activate Team
 
-## Participantes
-- Yerko
-- Alejandra
-- Rodolfo (el profe 2) 
-- Guille (el profe 1)
-- Ivan (Activate honorario) 
+A hands-on Git workshop for the **Product Triad** (Product Designer, Product Engineer, Product Manager).
 
-## Estructura del taller
+## Why this workshop?
 
-| Carpeta | Tema | Dificultad |
-|---|---|---|
-| `01-fundamentos/` | Status, add, commit | Básico |
-| `02-ramas/` | Branch, checkout, merge | Intermedio |
-| `03-colaboracion/` | Push, pull, conflictos | Intermedio |
-| `04-historial/` | Log, diff, revert | Avanzado |
+Your team will collaborate on a shared repository to create product specifications using **Spec-Driven Development** — a structured way to document requirements and hand off work to the engineering team. To do that effectively, you need to know Git well enough to work together without losing each other's work.
 
-## Cómo usar este taller
+This workshop teaches you exactly that: not every Git command, but the ones that matter when collaborating on a shared repository.
 
-1. Clona este repositorio en tu máquina local.
-2. Entra a cada carpeta en orden.
-3. Lee el `README.md` de cada ejercicio antes de empezar.
-4. Sigue las instrucciones paso a paso.
-5. Si te trabas, hay pistas al final de cada README.
+> You will have an AI assistant (like Claude or Codex) when you work on your real repo. This workshop is designed to be done **by hand**, so you understand what's happening before the assistant guides you.
 
-## Reglas
+## Who is this for?
 
-- No hay respuestas incorrectas, solo aprendizaje.
-- Puedes romper cosas — para eso existe git.
-- Pregunta cuando tengas dudas.
+- Teams of **3 to 5 people** working together (recommended)
+- Or **one person** working alone — each module includes a solo path
+
+## Modules
+
+| Folder | Topic | Level | Est. time |
+|---|---|---|---|
+| `00-setup/` | SSH key, clone, git config | Pre-requisite | 20 min |
+| `01-primer-commit/` | status, add, commit, push | Beginner | 20 min |
+| `02-trabajo-en-equipo/` | pull, merge, conflict resolution | Intermediate | 30 min |
+| `03-ramas/` | branch, merge, history | Intermediate | 30 min |
+| `04-historial/` | log, diff, revert, stash | Advanced | 20 min |
+
+## How to use this workshop
+
+1. **Before the session:** every participant completes `00-setup/` individually on their own machine.
+2. **During the session:** go through modules in order as a group.
+3. Read the README of each module before starting.
+4. Follow the steps one by one — don't skip ahead.
+5. If you get stuck, hints are at the bottom of each README.
+
+## Ground rules
+
+- There are no wrong answers, only learning.
+- You can break things — that's what Git is for.
+- Ask when you have doubts.
+- The goal is to understand the concepts, not to memorize commands.
 
 ---
-*Taller creado para el Activate Team.*
+*Workshop created for the Activate Team.*
